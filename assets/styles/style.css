@@ -1,0 +1,94 @@
+@import "components/switcher.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+
+    /*Colors*/
+
+    /*Primary*/
+    --color-primary-green-500: hsl(163, 72%, 41%);
+    --color-primary-red-500: hsl(356, 69%, 56%);
+    --color-primary-blue-600 : hsl(208, 92%, 53%); /* (Facebook) */
+    --color-primary-blue-500 : hsl(203, 89%, 53%); /* (Twitter) */
+    --color-primary-gradient : hsl(37, 97%, 70%), hsl(5, 77%, 71%), hsl(329, 70%, 58%); /* (Instagram) */
+    --color-primary-red-700 : hsl(348, 97%, 39%); /* (YouTube) */
+
+    /*Dark Theme*/
+    --color-dark-theme : hsl(210, 79%, 56%), hsl(146, 68%, 55%); /* (Toggle) */
+
+    /*Light Theme*/
+    --color-light-theme : hsl(230, 22%, 74%); /* (Toggle) */
+
+    /*Neutral*/
+
+    /*Dark Theme*/
+    --color-dark-gray-950 : hsl(230, 17%, 14%); /* (BG) */
+    --color-dark-gray-900 : hsl(232, 19%, 15%); /* (Top BG Pattern) */
+    --color-dark-navy-950 : hsl(228, 28%, 20%); /* (Card BG) */
+    --color-dark-gray-400 : hsl(230, 22%, 74%); /* (Text) */
+    --color-dark-white : hsl(0, 100%, 100%); /* (Text) */
+
+    /*Light Theme*/
+    --color-light-white : hsl(0, 100%, 100%); /* (BG) */
+    --color-light-blue-50 : hsl(225, 100%, 98%); /* (Top BG Pattern) */
+    --color-light-navy-50 : hsl(227, 47%, 96%); /* (Card BG) */
+    --color-light-gray-650 : hsl(228, 12%, 44%); /* (Text) */
+    --color-light-gray-950 : hsl(230, 17%, 14%); /* (Text) */
+
+    /*Typography*/
+
+    /*Body Copy*/
+    --fs-regular : 14px; /*  (Overview Card Headings)  */
+
+    /*Font*/
+    --ff-Inter : Inter;
+
+    /* Weights */
+    --fw-400 : 400;
+    --fw-700 : 700;
+
+}
+
+body {
+    min-height: 100vh;
+    padding-inline: 1rem;
+    font-size: var(--fs-regular);
+    font-family: var(--ff-Inter), Montserrat, sans-serif;
+
+    header, main {
+        max-width: 1440px;
+        margin: auto;
+        padding-inline: 4rem;
+        @media screen and (width < 600px) {
+            padding-inline: 0;
+        }
+    }
+}
+
+header {
+    display: flex; gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+}
+.header-title {
+
+}
+.header-title h1 {
+    margin: 0;
+}
+.header-title p {
+    margin: 0;
+}
+.header-theme {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+
+    & > span {
+        min-width: fit-content;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
