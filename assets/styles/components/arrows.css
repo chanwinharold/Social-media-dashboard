@@ -1,0 +1,18 @@
+.arrow-down,
+.arrow-up {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.arrow-down:before  {
+    content: "";
+    width: 8px; height: 4px;
+    background: url(../../images/icon-down.svg);
+    background-size: cover;
+}
+.arrow-up:before  {
+    content: "";
+    width: 8px; height: 4px;
+    background: url(../../images/icon-up.svg);
+    background-size: cover;
+}

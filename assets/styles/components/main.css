@@ -1,0 +1,13 @@
+.section-followers,
+.section-overview,
+.section-overview > div {
+    min-width: 100%;
+    display: grid;
+    place-items: center;
+}
+.section-followers,
+.section-overview {
+    margin-bottom: 2rem;
+}
+
+.section-overview h2 {place-self: start;}
