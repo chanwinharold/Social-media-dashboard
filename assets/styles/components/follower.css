@@ -4,9 +4,6 @@
     place-items: center;
     text-align: center;
     padding-block: 1.5rem;
-
-    border-top: 5px solid;
-    border-top-color: var(--color-primary-blue-500);
     border-radius: 0.4rem;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 25%);
 }
@@ -30,4 +27,27 @@
 }
 .article-followers > div:nth-child(3) {
     font-weight: var(--fw-700);
+}
+
+/*BORDER TOP COLORS*/
+.border-facebook {
+    border-top: 5px solid var(--color-primary-blue-500);
+}
+.border-twitter {
+    border-top: 5px solid var(--color-primary-blue-500);
+}
+.border-instagram {
+    position: relative;
+    &:before {
+        display: inline-block;
+        content: "";
+        height: 5px;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        background: linear-gradient(to right, var(--color-primary-gradient));
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+}
+.border-youtube {
+    border-top: 5px solid var(--color-primary-red-700);
 }

@@ -5,8 +5,6 @@
 @import "components/follower.css";
 @import "components/overview.css";
 @import "components/arrows.css";
-@import "light.css";
-@import "dark.css";
 
 :root {
 
@@ -80,5 +78,12 @@ body {
     z-index: -1;
 }
 
-.attribution { font-size: 11px; text-align: center; display: none; }
+.text-green {
+    color: var(--color-primary-green-500);
+}
+.text-red {
+    color: var(--color-primary-red-500);
+}
+
+.attribution { font-size: 11px; text-align: center; display: none; position: absolute; bottom: 0; left: 50vh; }
 .attribution a { color: hsl(228, 45%, 44%); }
