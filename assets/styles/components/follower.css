@@ -1,16 +1,53 @@
 .article-followers {
-    width: min(100%, 300px);
+    width: min(100%, var(--w-card));
     display: grid; row-gap: 1rem;
     place-items: center;
     text-align: center;
     padding-block: 1.5rem;
     border-radius: 0.4rem;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 25%);
+
+    /* Animation au chargement */
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+
+    /* Transition pour le hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.article-followers:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px hsla(0, 0%, 0%, 35%);
+}
+
+/* Animation en cascade pour chaque carte */
+.article-followers:nth-child(1) { animation-delay: 0.1s; }
+.article-followers:nth-child(2) { animation-delay: 0.2s; }
+.article-followers:nth-child(3) { animation-delay: 0.3s; }
+.article-followers:nth-child(4) { animation-delay: 0.4s; }
+.article-followers:nth-child(5) { animation-delay: 0.5s; }
+.article-followers:nth-child(6) { animation-delay: 0.6s; }
+.article-followers:nth-child(7) { animation-delay: 0.7s; }
+.article-followers:nth-child(8) { animation-delay: 0.8s; }
+
+/* Animation keyframe */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .article-followers > div:first-child {
     display: flex; column-gap: 0.5rem;
     align-items: center;
+    p { font-weight: var(--fw-700); }
 }
 .article-followers > div:nth-child(2) {
     display: flex; flex-direction: column;
@@ -23,6 +60,7 @@
     em {
         text-transform: uppercase;
         letter-spacing: 0.5ch;
+        font-weight: var(--fw-400);
     }
 }
 .article-followers > div:nth-child(3) {

@@ -1,13 +1,30 @@
 .section-followers,
-.section-overview,
-.section-overview > div {
-    min-width: 100%;
-    display: grid;
-    place-items: center;
-}
-.section-followers,
 .section-overview {
+    min-width: 100%;
     margin-bottom: 2rem;
 }
 
-.section-overview h2 {place-self: start;}
+.section-followers,
+.section-overview > div {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    @media screen and (width > 1200px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    @media screen and (width < 1044px) { justify-content: center; }
+}
+
+
+.section-overview {
+    display: grid;
+    place-items: center;
+}
+.section-overview > div {
+    min-width: 100%;
+}
+.section-overview h2 {
+    place-self: start;
+}
